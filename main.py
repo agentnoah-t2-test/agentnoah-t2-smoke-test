@@ -10,11 +10,11 @@ db = sqlite3.connect("users.db", check_same_thread=False)
 
 
 @app.get("/user/{user_id}")
-def get_user(user_id: str):
+def get_user(user_id: int):
     # SEEDED BUG: SQL injection via f-string formatting on user-controlled input.
     # An attacker can pass user_id="1 OR 1=1" and dump the table.
-    query = f"SELECT * FROM users WHERE id = {user_id}"
-    return db.execute(query).fetchall()
+    query = "SELECT * FROM users WHERE id = ?"
+    return db.execute(query, (user_id,)).fetchall()
 
 
 @app.get("/health")
