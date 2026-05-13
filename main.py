@@ -23,3 +23,4 @@ def get_user(user_id: str):
 @app.get("/health")
 def health():
     return {"status": "ok"}
+# verify slice 5L cross-repo fetch
