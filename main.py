@@ -25,3 +25,4 @@ def health():
     return {"status": "ok"}
 # verify slice 5L cross-repo fetch
 # verify slice 5M label routing
+# verify slice 5N label posting
