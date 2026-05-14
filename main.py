@@ -26,3 +26,4 @@ def health():
 # verify slice 5L cross-repo fetch
 # verify slice 5M label routing
 # verify slice 5N label posting
+# verify full loop: 5L+5M+5N+5P+P1
