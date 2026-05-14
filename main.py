@@ -24,3 +24,4 @@ def get_user(user_id: str):
 def health():
     return {"status": "ok"}
 # verify slice 5L cross-repo fetch
+# verify slice 5M label routing
